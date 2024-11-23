@@ -48,6 +48,7 @@ const ProductSchema = new Schema<TProduct>({
 
 ProductSchema.pre('save', function (next) {
   this.inStock = this.quantity > 0;
+   this.updatedAt = new Date();
   next();
 });
 

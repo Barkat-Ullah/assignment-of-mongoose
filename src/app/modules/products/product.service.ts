@@ -33,11 +33,9 @@ const deleteProductInfoDb = async (id: string) => {
 };
 
 const updateProductInfoDb = async (id: string, payload: Partial<TProduct>) => {
-  console.log(payload.inStock);
   const result = await Product.findByIdAndUpdate(id, payload, {
     new: true,
   });
-  console.log(result);
   return result;
 };
 
