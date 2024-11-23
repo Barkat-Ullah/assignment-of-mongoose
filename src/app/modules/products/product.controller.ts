@@ -11,7 +11,7 @@ const createProductController = async (req: Request, res: Response) => {
       data: result,
     });
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+ 
   } catch (err: any) {
     res.status(500).json({
       success: false,
@@ -34,7 +34,7 @@ const getProductController = async (req: Request, res: Response) => {
       data: result,
     });
   } catch (err: any) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+ 
     res.status(500).json({
       success: false,
       message: err.message || 'something went wrong',
@@ -54,7 +54,7 @@ const getSingleProductController = async (req: Request, res: Response) => {
       data: result,
     });
   } catch (err: any) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+ 
     res.status(500).json({
       success: false,
       message: err.message || 'something went wrong',
@@ -74,7 +74,7 @@ const deleteProductController = async (req: Request, res: Response) => {
       data: result,
     });
   } catch (err: any) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+ 
     res.status(500).json({
       success: false,
       message: err.message || 'something went wrong',
@@ -98,7 +98,7 @@ const updateProductController = async (req: Request, res: Response) => {
       data: result,
     });
   } catch (err: any) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+ 
     res.status(500).json({
       success: false,
       message: err.message || 'something went wrong',

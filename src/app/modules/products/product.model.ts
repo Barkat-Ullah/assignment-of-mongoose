@@ -34,7 +34,7 @@ const ProductSchema = new Schema<TProduct>({
   },
   inStock: {
     type: Boolean,
-    required: true,
+    default: true,
   },
   createdAt: {
     type: Date,
@@ -44,6 +44,15 @@ const ProductSchema = new Schema<TProduct>({
     type: Date,
     default: Date.now,
   },
+});
+
+ProductSchema.pre('save', function (next) {
+  this.inStock = this.quantity > 0;
+  next();
+});
+
+ProductSchema.post('save', function (doc) {
+  console.log(`Product '${doc.title}' has been updated successfully.`);
 });
 
 export const Product = model<TProduct>('Product', ProductSchema);

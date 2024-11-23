@@ -28,12 +28,16 @@ const getSingleProductInfoDb = async (id: string) => {
 };
 
 const deleteProductInfoDb = async (id: string) => {
-  const result = (await Product.findByIdAndDelete(id, { new: true })) || {};
+  const result = (await Product.findByIdAndDelete(id)) || {};
   return result;
 };
 
 const updateProductInfoDb = async (id: string, payload: Partial<TProduct>) => {
-  const result = await Product.findByIdAndUpdate(id, payload, { new: true });
+  console.log(payload.inStock);
+  const result = await Product.findByIdAndUpdate(id, payload, {
+    new: true,
+  });
+  console.log(result);
   return result;
 };
 
