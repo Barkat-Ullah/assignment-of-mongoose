@@ -12,6 +12,7 @@ const createProductController = async (req: Request, res: Response) => {
     });
 
  
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     res.status(500).json({
       success: false,
@@ -33,6 +34,7 @@ const getProductController = async (req: Request, res: Response) => {
       message: 'All books are get successfully',
       data: result,
     });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
  
     res.status(500).json({
@@ -53,6 +55,7 @@ const getSingleProductController = async (req: Request, res: Response) => {
       message: 'Book retrieved successfully',
       data: result,
     });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
  
     res.status(500).json({
@@ -73,6 +76,7 @@ const deleteProductController = async (req: Request, res: Response) => {
       message: 'Book deleted successfully',
       data: result,
     });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
  
     res.status(500).json({
@@ -97,6 +101,7 @@ const updateProductController = async (req: Request, res: Response) => {
       message: 'Book updated successfully',
       data: result,
     });
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
  
     res.status(500).json({

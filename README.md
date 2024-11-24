@@ -36,20 +36,20 @@ A simple project for managing books and orders, built with TypeScript, Node.js, 
 
 ### Book Routes
 
-| Method | Endpoint          | Description              |
-|--------|--------------------|--------------------------|
-| POST   | /api/v1/books      | Create a new book.       |
-| GET    | /api/v1/books      | Get all books.           |
-| GET    | /api/v1/books/:id  | Get a single book by ID. |
-| PUT    | /api/v1/books/:id  | Update a book by ID.     |
-| DELETE | /api/v1/books/:id  | Delete a book by ID.     |
+| Method | Endpoint                 | Description              |
+|--------|--------------------------|--------------------|
+| POST   | /api/products            | Create a new book.       |
+| GET    | /api/products            | Get all books.           |
+| GET    | /api/products/:productId | Get a single book by ID. |
+| PUT    | /api/products/:productId | Update a book by ID.     |
+| DELETE | /api/products/:productId | Delete a book by ID.     |
 
 ### Order Routes
 
 | Method | Endpoint              | Description                      |
 |--------|------------------------|----------------------------------|
-| POST   | /api/v1/orders         | Place an order for a book.       |
-| GET    | /api/v1/orders/revenue | Calculate and view total revenue.|
+| POST   | /api/orders         | Place an order for a book.       |
+| GET    | /api/orders/revenue | Calculate and view total revenue.|
 
 ---
 
@@ -98,7 +98,7 @@ A Node.js application for managing book orders, built using TypeScript, Express,
 ## 🛠️ Project Structure
 
 ```plaintext
-book-order-management/
+Assignment-of-mongoose/
 ├── src/
 │   ├── routes/                  # Route definitions
 │   │   ├── book.routes.ts
