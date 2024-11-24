@@ -125,7 +125,7 @@ Assignment-of-mongoose/
 
 Body :
 ```http
-POST /api/v1/books
+POST /api/products/create-product
 Content-Type: application/json
 ```
 ```json
@@ -161,7 +161,7 @@ Response :
 ## 📊 Example: Total Revenue
 Request :
 ```
-GET /api/v1/orders/revenue
+GET /api/orders/revenue
 ```
 Response : 
 ```
@@ -173,6 +173,12 @@ Response :
   }
 }
 ```
+## video overview
+
+
+ visit the demo for better experience this project "Book & Order Manageent 🎥: [Demo](https://drive.google.com/file/d/1H_Kg_2aB4zRINE5ATfdEAP_nBx8kqWGL/view?usp=sharing)
+
+
 
 
 
