@@ -11,8 +11,7 @@ const createProductController = async (req: Request, res: Response) => {
       data: result,
     });
 
- 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     res.status(500).json({
       success: false,
@@ -34,9 +33,8 @@ const getProductController = async (req: Request, res: Response) => {
       message: 'All books are get successfully',
       data: result,
     });
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
- 
     res.status(500).json({
       success: false,
       message: err.message || 'something went wrong',
@@ -55,9 +53,8 @@ const getSingleProductController = async (req: Request, res: Response) => {
       message: 'Book retrieved successfully',
       data: result,
     });
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
- 
     res.status(500).json({
       success: false,
       message: err.message || 'something went wrong',
@@ -71,19 +68,24 @@ const deleteProductController = async (req: Request, res: Response) => {
   try {
     const id = req.params.productId;
     const result = (await createProductService.deleteProductInfoDb(id)) || {};
+    if (!result) {
+      return res.status(404).json({
+        success: false,
+        message: 'Book not found',
+        data: {},
+      });
+    }
     res.status(200).json({
       success: true,
       message: 'Book deleted successfully',
-      data: result,
+      data: {},
     });
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
- 
     res.status(500).json({
       success: false,
       message: err.message || 'something went wrong',
       error: err,
-      stack: err.stack,
     });
   }
 };
@@ -101,9 +103,8 @@ const updateProductController = async (req: Request, res: Response) => {
       message: 'Book updated successfully',
       data: result,
     });
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
- 
     res.status(500).json({
       success: false,
       message: err.message || 'something went wrong',

@@ -11,7 +11,7 @@ const orderBookRevenue = async () => {
     {
       $group: {
         _id: null,
-        total: { $sum: '$totalPrice' },
+        totalRevenue: { $sum: '$totalPrice' },
       },
     },
   ]);
